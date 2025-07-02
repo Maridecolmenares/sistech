@@ -1,0 +1,169 @@
+/* Esercizio 1: Griglia di Base */
+.container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+}
+.item {
+    border: 1px solid black;
+}
+/* Esercizio 2: Colonne Frazionarie (fr) */
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+}
+/* Esercizio 4: Allineamento Items (justify-items, align-items) */
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    justify-items: center;
+    align-items: center;
+}
+.grid_item {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Esercizio 3: Layout con Aree Nominate */
+.card {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "image"
+    "footer";
+  grid-template-rows: auto 200px auto;
+  width: 500px;
+}
+
+.header {
+  grid-area: header;
+  background: #f8d7da;
+}
+
+.image {
+  grid-area: image;
+  background: #b4d5f8;
+}
+
+.footer {
+  grid-area: footer;
+  background: #9dc7a7;
+}
+/* Esercizio 5: Allineamento Contenuto (justify-content, align-content) */
+.grid-5 {
+    display: grid;
+    height: 500px;
+    border: 1px solid black;
+    justify-content: center;
+    align-content: center;
+}
+.grid-5_item {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+}
+/* Esercizio 6: Flusso Automatico Denso */
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-6_item--column {
+grid-column: span 2;
+}
+.grid-6_item {
+    border: 1px solid black;
+    height: 200px;
+    text-align: center;
+    align-content: center;
+}
+/* Esercizio 7: Estensione su Colonne e Righe (Span) */
+.grid-7 {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+.grid-7_item--span {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    font-size: 3rem;
+}
+.grid-7_item {
+    border: 1px solid black;
+}
+/* Esercizio 8: Scorciatoia grid-area */
+.grid-8 {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+.grid-8_item {
+   border: 1px solid black; 
+}
+.grid-8_item--area {
+    grid-area: 2 / 1 / 4 / 3;
+    font-size: 3rem;
+}
+/* Esercizio 9: Allineamento Individuale (align-self, justify-self) */
+.grid-9 {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+}
+.special {
+    align-self: end;
+    justify-self: center;
+}
+.grid-9 div {
+    border: 1px solid black;
+}
+/* Esercizio 10: Layout Completo */
+.container-web {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar content"
+    "footer  footer";
+  gap: 20px;
+  height: 100vh;
+}
+.header {
+  grid-area: header;
+  background-color: #dd474e;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #8d469e;
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  grid-area: content;
+  background-color: #dbaebc;
+  padding: 20px;
+  color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #dd474e;
+  color: white;
+  padding: 20px;
+}
